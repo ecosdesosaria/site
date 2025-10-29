@@ -1230,7 +1230,7 @@
   const accountsEl = document.getElementById("accounts"); // element to show accounts count
 
   try {
-    const res = await fetch("http://localhost:8080/api/players", { cache: "no-store" });
+    const res = await fetch("/api/players", { cache: "no-store" });
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
 
