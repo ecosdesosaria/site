@@ -422,9 +422,40 @@
             background-image: radial-gradient(circle at top left, rgba(255,255,255,0.3), transparent 70%),
                               radial-gradient(circle at bottom right, rgba(0,0,0,0.1), transparent 70%);
         }
+
+        /* Banner BETA */
+        .beta-banner {
+            position: fixed;
+            top: 30px;
+            right: -45px;
+            background: linear-gradient(45deg, var(--haunting-melody), var(--cedar-staff));
+            color: white;
+            padding: 8px 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transform: rotate(45deg);
+            z-index: 9999;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Para evitar que fique em cima do scrollbar */
+        .beta-banner::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 100%;
+            background: transparent;
+        }
     </style>
 </head>
 <body>
+
+    <div class="beta-banner">BETA</div>
     <!-- Header -->
     <header class="uo-header py-3 sticky-top">
         <div class="container">
@@ -949,7 +980,7 @@
                     <p>Não afiliado à Electronic Arts ou Origin Systems.</p>
                 </div>
                 <div class="col-md-6 text-end">
-                    <p>&copy; 2023 Ecos de Sosaria. Todos os direitos reservados.</p>
+                    <p>&copy; 2025 Ecos de Sosaria.</p>
                     <p>Ultima Online é uma marca registrada da Electronic Arts Inc.</p>
                 </div>
             </div>
