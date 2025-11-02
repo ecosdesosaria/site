@@ -4,6 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecos de Sosaria - Servidor UO Roleplay</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Ecos de Sosaria - Servidor brasileiro de Ultima Online focado em roleplay. Jogue UO com 33 raças, 55 habilidades e sistema de destinos únicos.">
+    <meta name="keywords" content="Ultima Online, UO, Roleplay, RPG, Servidor UO, UO Brasil, Ecos de Sosaria, MMORPG">
+    <meta name="author" content="Ecos de Sosaria">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ecosdesosaria.com/">
+    <meta property="og:title" content="Ecos de Sosaria - Servidor UO Roleplay">
+    <meta property="og:description" content="Servidor brasileiro de Ultima Online focado em roleplay. 33 raças, 55 habilidades e sistema de destinos únicos.">
+    <meta property="og:image" content="logo_ecosdesosaria.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ecosdesosaria.com/">
+    <meta property="twitter:title" content="Ecos de Sosaria - Servidor UO Roleplay">
+    <meta property="twitter:description" content="Servidor brasileiro de Ultima Online focado em roleplay. 33 raças, 55 habilidades e sistema de destinos únicos.">
+    <meta property="twitter:image" content="logo_ecosdesosaria.png">
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GameServer",
+      "name": "Ecos de Sosaria",
+      "description": "Servidor brasileiro de Ultima Online focado em roleplay",
+      "url": "https://ecosdesosaria.com",
+      "game": "Ultima Online",
+      "genre": "MMORPG",
+      "players": "10+",
+      "operatingSystem": "Windows, Linux, macOS"
+    }
+    </script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Fontes medievais -->
@@ -451,6 +490,76 @@
             height: 100%;
             background: transparent;
         }
+
+        /* Novos estilos para a seção de raças simplificada */
+        .races-list {
+            column-count: 4;
+            column-gap: 20px;
+        }
+        
+        @media (max-width: 992px) {
+            .races-list {
+                column-count: 3;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .races-list {
+                column-count: 2;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .races-list {
+                column-count: 1;
+            }
+        }
+        
+        .races-list li {
+            break-inside: avoid;
+            margin-bottom: 8px;
+            padding: 5px 0;
+            border-bottom: 1px dotted rgba(85, 25, 16, 0.2);
+        }
+        
+        /* Estilos para a seção de habilidades */
+        .skills-category {
+            margin-bottom: 2rem;
+        }
+        
+        .skills-category h4 {
+            color: var(--haunting-melody);
+            border-bottom: 1px solid var(--cedar-staff);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .skills-list {
+            column-count: 2;
+            column-gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .skills-list {
+                column-count: 1;
+            }
+        }
+        
+        .skills-list li {
+            break-inside: avoid;
+            margin-bottom: 8px;
+            padding: 5px 0;
+        }
+        
+        .social-icons a {
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--haunting-melody);
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 <body>
@@ -475,6 +584,7 @@
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
+                            
                                 <ul class="navbar-nav uo-nav">
                                     <li class="nav-item">
                                         <a class="nav-link" href="#inicio">Início</a>
@@ -486,6 +596,9 @@
                                         <a class="nav-link" href="#racas">Raças</a>
                                     </li>
                                     <li class="nav-item">
+                                        <a class="nav-link" href="#habilidades">Habilidades</a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a class="nav-link" href="#destinos">Destinos</a>
                                     </li>
                                     <li class="nav-item">
@@ -493,14 +606,18 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#download">Download</a>
+
                                     </li>
+                                    
                                     <li class="nav-item">
                                     <a class="nav-link external-link" href="https://wiki.ecosdesosaria.com" target="_blank" rel="noopener">
-                                        Wiki <i class="bi bi-box-arrow-up-right external-icon"></i>
+                                        Wiki <i class="bi bi-box-arrow-up-right external-icon"></i><br>
                                     </a>
                                 </li>
                                 </ul>
+                                
                             </div>
+                            
                         </nav>
                     </div>
                 </div>
@@ -520,6 +637,7 @@
                 <div class="mt-4">
                 <a href="#download" class="btn uo-btn mt-2">Jogar Agora</a>
                 <a href="https://stt.gg/D4QVyFgc" class="btn uo-btn mt-2" target="_blank">Stoat</a>
+                <br>
                 </div>
             </div>
 
@@ -557,18 +675,19 @@
             <h2 class="text-center">Sobre os Ecos de Sosaria</h2>
             <div class="row mt-4">
                 <div class="col-md-6">
-                    <p>Os Ecos de Sosaria é um servidor de Ultima Online dedicado ao roleplay, onde cada jogador tem a oportunidade de criar uma história única em um mundo persistente e em constante evolução.</p>
+                    <p>Os Ecos de Sosaria é um servidor de Ultima Online, baseado no mod Secrets of Sosaria dedicado ao roleplay, onde cada jogador tem a oportunidade de criar uma história única em um mundo persistente e em constante evolução.</p>
                     <p>Nossa comunidade valoriza a interpretação de personagens, a criação de narrativas colaborativas e a imersão no mundo de Sosaria.</p>
                     <div class="uo-quote">
                         "Em Sosaria, suas escolhas definem seu destino. Seja um nobre cavaleiro, um astuto ladrão ou um poderoso mago, o mundo responde às suas ações."
                     </div>
+                    <a href="https://wiki.ecosdesosaria.com/wiki/Sobre" class="btn uo-btn mt-3" target="_blank">Saiba Mais</a>
                 </div>
                 <div class="col-md-6">
                     <div class="row text-center">
                         <div class="col-6 mb-4">
                             <div class="uo-feature-icon">⚔️</div>
-                            <h5>Sistema de Combate</h5>
-                            <p>Sistema de combate estratégico e balanceado</p>
+                            <h5>Aventuras Épicas</h5>
+                            <p>Tanto para jogar sozinho ou com outros</p>
                         </div>
                         <div class="col-6 mb-4">
                             <div class="uo-feature-icon">📖</div>
@@ -583,7 +702,7 @@
                         <div class="col-6 mb-4">
                             <div class="uo-feature-icon">👥</div>
                             <h5>Comunidade</h5>
-                            <p>Comunidade ativa e acolhedora</p>
+                            <p>Comunidade pequena mas acolhedora</p>
                         </div>
                     </div>
                 </div>
@@ -595,205 +714,167 @@
     <section id="racas" class="container mt-5">
         <div class="uo-section">
             <h2 class="text-center">Raças de Sosaria</h2>
-				Em Ecos de Sosaria você pode escolher entre diversas raças jogáveis. Por limitação do cliente, as armas e armaduras equipadas nas raças, que não seja a humana, não aparecerão no jogo ou no personagem. Algumas das raças terão vantagens e desvantagens, incluindo não poder entrar nas cidades dos humanos, em alguns casos.<br><br>
-				<b>Importante:</b> Raças hostis são as únicas que podem atacar ou serem atacadas por personagens não hostis, sem justificativa. No jogo, essas raças são consideradas <b>monstros</b>. No entanto, o gank é proibido. Você deve dar tempo para o outro player fugir, depois de ressucitar. Você deve jogar como se fosse um monstro do jogo (incluindo saber que pode possuir baixo intelecto) e interpretar como o mesmo (talvez nem falando a mesma língua de um humano, ou com limitações). O player de uma raça hostil, poderá levar apenas 1 item do corpo de algum player morto, no entanto, caso um player não hostil mate um player de raça hostil, poderá levar todos os itens com ele.<br>
-				<b>Importante:</b> A regra acima não se aplica a <b>Humanos</b> hostis. Humanos hostis não podem atacar nem atacar outro player fora do RP.<br>
+            <p>Em Ecos de Sosaria você pode escolher entre diversas raças jogáveis. Por limitação do cliente, as armas e armaduras equipadas nas raças, que não seja a humana, não aparecerão no jogo ou no personagem. Algumas das raças terão vantagens e desvantagens, incluindo não poder entrar nas cidades dos humanos, em alguns casos.</p>
+            
+            <p><b>Importante:</b> Raças hostis são as únicas que podem atacar ou serem atacadas por personagens não hostis, sem justificativa. No jogo, essas raças são consideradas <b>monstros</b>. No entanto, o gank é proibido. Você deve dar tempo para o outro player fugir, depois de ressucitar. Você deve jogar como se fosse um monstro do jogo (incluindo saber que pode possuir baixo intelecto) e interpretar como o mesmo (talvez nem falando a mesma língua de um humano, ou com limitações). O player de uma raça hostil, poderá levar apenas 1 item do corpo de algum player morto, no entanto, caso um player não hostil mate um player de raça hostil, poderá levar todos os itens com ele.</p>
+            
+            <p><b>Importante:</b> A regra acima não se aplica a <b>Humanos</b> hostis. Humanos hostis não podem atacar nem atacar outro player fora do RP.</p>
+            
+            <h4 class="mt-4">Lista de Raças Disponíveis</h4>
+            <ul class="races-list">
+                <li>Humanos</li>
+                <li>Aquáticos</li>
+                <li>Bugbear</li>
+                <li>Centauro</li>
+                <li>Demônio</li>
+                <li>Fada</li>
+                <li>Fungo</li>
+                <li>Gárgula</li>
+                <li>Gnoll</li>
+                <li>Goblin</li>
+                <li>Golem (Flesh Golem)</li>
+                <li>Hobgoblin</li>
+                <li>Illithid (Mind Flayer)</li>
+                <li>Imp</li>
+                <li>Kilrathi</li>
+                <li>Kobold</li>
+                <li>Minotauro</li>
+                <li>Múmia</li>
+                <li>Naga</li>
+                <li>Ogre</li>
+                <li>Orc</li>
+                <li>Planta (Shambler)</li>
+                <li>Reptiliano</li>
+                <li>Roedor (Homem-Rato)</li>
+                <li>Salamandra</li>
+                <li>Satyr (Sátiro)</li>
+                <li>Serpente</li>
+                <li>Skeleton (Esqueleto)</li>
+                <li>Sphinx (Esfinge)</li>
+                <li>Succubus</li>
+                <li>Troll</li>
+                <li>Vampiro</li>
+                <li>Zumbi</li>
+            </ul>
+            
+            <div class="text-center mt-4">
+                <a href="https://wiki.ecosdesosaria.com/wiki/Ra%C3%A7as" class="btn uo-btn" target="_blank">Saiba Mais Sobre as Raças</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="container mt-5">
+        <div class="uo-section">
+            <h2 class="text-center">Habilidades</h2>
+            <p>Em Ecos de Sosaria, temos ao todo 55 habilidades distribuídas em diferentes categorias, permitindo que você crie personagens únicos e especializados.</p>
+            <p>As habilidades vão de 0.0 até 100.0 e você pode ter até 1000.0 pontos distribuídos.</p>
+            
             <div class="row mt-4">
-                <div class="col-md-4 mb-4">
-                    <div class="uo-card card race-card">
-                        <div class="race-image human-bg">
-                            <img src="races/humano.png" alt="Humano">
-                        </div>
-                        <h4 class="card-title">Humano</h4>
-                        <p class="card-text">
-                            Versáteis e adaptáveis, os humanos são conhecidos por sua diversidade e capacidade de prosperar em qualquer ambiente. Podem seguir qualquer caminho que desejarem.
-                        </p>
-                        <div class="bonus-text">
-                            Alinhamento: Neutro<br>
-                            Bônus Humano: Diversos destinos para escolher.
-                        </div>
+                <div class="col-md-6">
+                    <div class="skills-category">
+                        <h4>Habilidades Variadas</h4>
+                        <ul class="skills-list">
+                            <li>Arms Lore (Conhecimento sobre armas)</li>
+                            <li>Begging (Mendigar / Implorar)</li>
+                            <li>Camping (Acampar)</li>
+                            <li>Cartography (Cartografia)</li>
+                            <li>Forensic Evaluation (Avaliação Forense)</li>
+                            <li>Mercantile (Mercantil)</li>
+                            <li>Tasting (Degustação)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h4>Habilidades de Combate</h4>
+                        <ul class="skills-list">
+                            <li>Anatomy (Anatomia)</li>
+                            <li>Bludgeoning (Concussão)</li>
+                            <li>Fencing (Esgrima)</li>
+                            <li>Fist Fighting (Pugilismo)</li>
+                            <li>Focus (Foco)</li>
+                            <li>Healing (Cura)</li>
+                            <li>Marksmanship (Pontaria)</li>
+                            <li>Parry (Aparar)</li>
+                            <li>Swordsmanship (Espadachim)</li>
+                            <li>Tactics (Táticas)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h4>Habilidades Comerciais</h4>
+                        <ul class="skills-list">
+                            <li>Alchemy (Alquimia)</li>
+                            <li>Blacksmithing (Ferraria)</li>
+                            <li>Bowcrafting (Construção de Arcos)</li>
+                            <li>Carpentry (Carpintaria)</li>
+                            <li>Cooking (Culinária)</li>
+                            <li>Inscription (Inscrição)</li>
+                            <li>Lumberjacking (Lenhador)</li>
+                            <li>Mining (Mineração)</li>
+                            <li>Tailoring (Alfaiataria)</li>
+                            <li>Tinkering (Funilagem)</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="uo-card card race-card">
-                        <div class="race-image goblin-bg">
-                            <img src="races/aquatic.png" alt="Aquatic">
-                        </div>
-                        <h4 class="card-title">Aquatico</h4>
-                        <p class="card-text">
-                            Sub-Raças: <i>Lurker</i>, <i>Neptar</i> ou <i>Tritun</i>. Bonus variam de acordo com a sub-raça.
-                        </p>
-                        <div class="bonus-text">
-                            Alinhamento: Neutro<br>Bonus Aquático*:<br>
-                            +10 Tactics<br>
-                            +10 Seafaring<br>
-                            *Cada sub-raça possui bonus extras e diferentes, mas o bônus aquático se mantém entre elas.
-                        </div>
+                
+                <div class="col-md-6">
+                    <div class="skills-category">
+                        <h4>Habilidades Mágicas</h4>
+                        <ul class="skills-list">
+                            <li>Bushido</li>
+                            <li>Elementalism (Elementalismo)</li>
+                            <li>Knightship (Cavalaria)</li>
+                            <li>Magery (Magia)</li>
+                            <li>Magic Resistance (Resistência Mágica)</li>
+                            <li>Meditation (Meditação)</li>
+                            <li>Necromancy (Necromancia)</li>
+                            <li>Ninjitsu</li>
+                            <li>Psychology (Psicologia)</li>
+                            <li>Spiritualism (Espiritualismo)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h4>Habilidades Selvagens</h4>
+                        <ul class="skills-list">
+                            <li>Druidism (Druidismo)</li>
+                            <li>Herding (Pastoreio)</li>
+                            <li>Seafaring (Navegação Marítima)</li>
+                            <li>Taming (Domador)</li>
+                            <li>Tracking (Rastreamento)</li>
+                            <li>Veterinary (Veterinária)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h4>Habilidades Ladinas</h4>
+                        <ul class="skills-list">
+                            <li>Hiding (Esconder-se)</li>
+                            <li>Lockpicking (Arrombamento)</li>
+                            <li>Poisoning (Envenenamento)</li>
+                            <li>Remove Trap (Remover Armadilha)</li>
+                            <li>Searching (Procura)</li>
+                            <li>Snooping (Bisbilhotar)</li>
+                            <li>Stealing (Roubar)</li>
+                            <li>Stealth (Furtividade)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h4>Habilidades de Bardo</h4>
+                        <ul class="skills-list">
+                            <li>Discordance (Discordância)</li>
+                            <li>Musicianship (Musicalidade)</li>
+                            <li>Peacemaking (Pacificador)</li>
+                            <li>Provocation (Provocação)</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="uo-card card race-card">
-                        <div class="race-image goblin-bg">
-                            <img src="races/bugbear.png" alt="Bugbear">
-                        </div>
-                        <h4 class="card-title">Bugbear</h4>
-                        <p class="card-text"></p>
-                        <div class="bonus-text">
-                            Alinhamento: Neutro<br>Bônus Bugbear:<br>
-                            +10 Tactics<br>
-                            +10 Arms Lore<br>
-                            +5% Cold Resist<br>
-                            +5% Damage Increase<br>
-                            +10% Defence Chnce Increase<br>
-                            +5 Strenth Bonus
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="uo-card card race-card">
-                        <div class="race-image goblin-bg">
-                            <img src="races/centaur.png" alt="Centauro">
-                        </div>
-                        <h4 class="card-title">Centauro</h4>
-                        <p class="card-text"></p>
-                        <div class="bonus-text">
-                            Alinhamento: Bom<br>Bônus Centauro:<br>
-                            +10 Tactics<br>
-                            +10 Marksmanship<br>
-                            +10% Hit Chance Increase<br>
-                            +300 Luck<br>
-                            +5 Stamina Increase<br>
-                            +1 Stamina Regeneration<br>
-                            +5% Swing Speed Increase
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="uo-card card race-card">
-                        <div class="race-image goblin-bg">
-                            <img src="races/demon.png" alt="Demonic">
-                        </div>
-                        <h4 class="card-title">Demônio</h4>
-                        <p class="card-text">
-                            Sub-Raças: <i>Devil Kin</i> ou <i>Shadow Demon</i>. Bônus variam de acordo com a sub-raça.
-                        </p>
-                        <div class="bonus-text">
-                            Alinhamento: Caótico<br>
-                            Bonus Demoniaco*:<br>
-                            +10 Magic Resistance<br>
-                            +1 Faster Casting<br>
-                            +1 Faster Cast Recovery<br>
-                            +5 Intelligence Bonus<br>
-                            +5 Mana Increase<br>
-                            +1 Mana Regeneration<br>
-                            Night Sight<br>
-                            *Cada sub-raça possui bonus extras e diferentes, mas o bônus demoniaco se mantém entre elas.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="uo-card card race-card">
-                        <div class="race-image goblin-bg">
-                            <img src="races/fairy.png" alt="Fey">
-                        </div>
-                        <h4 class="card-title">Fada</h4>
-                        <p class="card-text">
-                            Sub-Raças: <i>Fairy (Bom)</i> ou <i>Pixie (Neutro)</i>. Bônus variam de acordo com a sub-raça.
-                        </p>
-                        <div class="bonus-text">
-                            Alinhamento: Bom ou Neutro<br>Bonus Fadas*:<br>
-                            +5% Energy Resist<br>
-                            +300 Luck<br>
-                            *+Outros<br>
-                            *Cada sub-raça possui bonus extras e diferentes, mas o bônus das fadas se mantém entre elas.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="uo-card card race-card">
-                        <div class="race-image goblin-bg">
-                            <img src="races/gargula.png" alt="Gargula">
-                        </div>
-                        <h4 class="card-title">Gargula</h4>
-                        <p class="card-text">
-                            Sub-Raças: <i>Astral Gargoyle</i> ou <i>Gargoyle</i>. Não há diferenças entre os bonus.
-                        </p>
-                        <div class="bonus-text">
-                            Alinhamento: Neutro<br>Bonus Gargulas:<br>
-                            +10% Defend Chance Increase<br>
-                            +1 Faster Casting<br>
-                            +1 Faster Cast Recovery<br>
-                            +5 Intelligence Bonus<br>
-                            +10% Hit Chance Increase<br>
-                            +5% Lower Mana Cost<br>
-                            +5% Lower Reagent Cost<br>
-                            +5% Spell Damage Increase<br>
-                            Night Sight<br>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="uo-card card race-card">
-                        <div class="race-image goblin-bg">
-                            <img src="races/goblin.png" alt="Goblin">
-                        </div>
-                        <h4 class="card-title">Goblin</h4>
-                        <p class="card-text"></p>
-                        <div class="bonus-text">
-                            Bonus Destreza: 5<br>Sorte: 600<br>Visão Noturna
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="uo-card card race-card">
-                        <div class="race-image troll-bg">
-                            <img src="races/troll.png" alt="Troll">
-                        </div>
-                        <h4 class="card-title">Troll</h4>
-                        <p class="card-text"></p>
-                        <div class="bonus-text">
-                            Bonus Força: 10<br>Regeneração: 2 HP/seg<br>Resistência a Veneno
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="uo-card card race-card">
-                        <div class="race-image orc-bg">
-                            <img src="races/orc.png" alt="Orc">
-                        </div>
-                        <h4 class="card-title">Orc</h4>
-                        <p class="card-text"></p>
-                        <div class="bonus-text">
-                            Bonus Força: 8<br>Bonus Constituição: 5<br>Fúria Berserker
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="uo-card card race-card">
-                        <div class="race-image ratman-bg">
-                            <img src="races/ratman.png" alt="Homem-Rato">
-                        </div>
-                        <h4 class="card-title">Homem-Rato</h4>
-                        <p class="card-text"></p>
-                        <div class="bonus-text">
-                            Bonus Inteligência: 5<br>Furtividade: +20<br>Visão no Escuro
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="uo-card card race-card">
-                        <div class="race-image snakeman-bg">
-                            <img src="races/snakeman.png" alt="Homem-Cobra">
-                        </div>
-                        <h4 class="card-title">Homem-Cobra</h4>
-                        <p class="card-text">
-                            Seres reptilianos com corpos parcialmente serpentinos, conhecidos por sua inteligência e habilidades mágicas.
-                        </p>
-                        <div class="bonus-text">
-                            Bonus Magia: 10<br>Resistência a Frio: 15<br>Veneno Natural
-                        </div>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="https://wiki.ecosdesosaria.com/wiki/Habilidades" class="btn uo-btn" target="_blank">Saiba Mais Sobre as Habilidades</a>
             </div>
         </div>
     </section>
@@ -841,7 +922,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="uo-card card race-card">
-                        <div class="step-number">1</div> <h4>O Mágico</h4>
+                        <div class="step-number">1</div> <h4>O Mago</h4>
                         <div class="uo-feature-icon"><img src="destinos/the_magician.png" width="100%"></div>
                         <p class="destino-text"><b>A Cidade de Moon</b><br><br>Se você escolher este caminho, será um cidadão da cidade onde, durante a <i>Terceira Era das Trevas</i>, era cheia de magos. Eles eram, no entanto, do tipo corrupto e desonesto. <i>Erystam</i> também vivia na cidade, conduzindo seus experimentos para a imortalidade. Quando <i>Lord British</i> expulsou os magos corruptos da cidade após a destruição de <i>Exodus</i>, <i>Erstam</i> e os outros decidiram ir para a <i>Serpent Island</i>, onde ninguém poderia controlá-los. Agora um lugar tranquilo, muitos vêm aqui para cultivar e navegar pela costa em busca de mercados de peixes. É uma cidade popular por não ser muito grande, mas consegue oferecer muitos mercados para visitar. Aventureiros costumam vir do deserto próximo, gabando-se da riqueza obtida na <i>Ancient Pyramid</i>.</p>
                     </div>
@@ -904,30 +985,46 @@
     <section id="regras" class="container mt-5">
         <div class="uo-section">
             <h2 class="text-center">Regras do Servidor</h2>
+            <p>Para garantir uma experiência justa e divertida para todos os jogadores, estabelecemos algumas regras básicas que devem ser seguidas por todos.</p>
+            
             <div class="row mt-4">
                 <div class="col-md-6">
                     <div class="rule-card">
-                        <h4 class="card-title">Roleplay é Obrigatório</h4>
-                        <p class="card-text">Todos os jogadores devem manter o roleplay em todas as interações dentro do jogo. Personagens devem ter nomes apropriados para o universo de Ultima Online.</p>
+                        <h4>Roleplay é Obrigatório</h4>
+                        <p>Este é um servidor de roleplay. Todos os jogadores devem interpretar seus personagens de forma consistente e respeitosa.</p>
                     </div>
+                    
+                    <div class="rule-card metagaming">
+                        <h4>Sem Metagaming</h4>
+                        <p>Não utilize informações que seu personagem não teria acesso para obter vantagem no jogo.</p>
+                    </div>
+                    
                     <div class="rule-card community">
-                        <h4 class="card-title">Respeito à Comunidade</h4>
-                        <p class="card-text">Trate todos os jogadores com respeito, tanto dentro quanto fora do jogo. Comportamento tóxico não será tolerado.</p>
+                        <h4>Respeito à Comunidade</h4>
+                        <p>Trate todos os jogadores com respeito. Discriminação, assédio e comportamento tóxico não serão tolerados.</p>
                     </div>
                 </div>
+                
                 <div class="col-md-6">
-                    <div class="rule-card metagaming">
-                        <h4 class="card-title">Sem Metagaming</h4>
-                        <p class="card-text">Informações obtidas fora do jogo (como através do Discord) não devem ser usadas por seu personagem dentro do jogo.</p>
-                    </div>
                     <div class="rule-card powergaming">
-                        <h4 class="card-title">Sem Powergaming</h4>
-                        <p class="card-text">Evite ações que forcem resultados específicos em interações com outros jogadores sem dar a eles chance de reagir.</p>
+                        <h4>Sem Powergaming</h4>
+                        <p>Não force ações em outros jogadores sem seu consentimento. Roleplay deve ser uma experiência colaborativa.</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h4>Sem Exploração de Bugs</h4>
+                        <p>Se encontrar um bug, reporte-o à administração. Explorar bugs para obter vantagem resultará em punição.</p>
+                    </div>
+                    
+                    <div class="rule-card community">
+                        <h4>Linguagem Apropriada</h4>
+                        <p>Mantenha a linguagem apropriada nos canais públicos. Conteúdo ofensivo ou inapropriado não será tolerado.</p>
                     </div>
                 </div>
             </div>
+            
             <div class="text-center mt-4">
-                <button class="btn uo-btn">Ver Regras Completas</button>
+                <a href="https://wiki.ecosdesosaria.com/wiki/Sobre#Regras" class="btn uo-btn" target="_blank">Regras Completas</a>
             </div>
         </div>
     </section>
@@ -936,39 +1033,43 @@
     <section id="download" class="container mt-5">
         <div class="uo-section">
             <h2 class="text-center">Como Jogar</h2>
+            <p>Juntar-se aos Ecos de Sosaria é fácil! Siga os passos abaixo para começar sua aventura.</p>
+            
             <div class="row mt-4">
                 <div class="col-md-4 mb-4">
                     <div class="step-card">
                         <div class="step-number">1</div>
-                        <div class="uo-feature-icon">📥</div>
-                        <h4>Baixe o Client</h4>
-                        <p>Faça o download do client ClassicUO ou outro client compatível com UO.</p>
-                        <a href="https://drive.google.com/file/d/1--VQaHdszD95goa7wXr5u98kzryEDHRt/view?usp=drive_link" class="btn uo-btn mt-2" target="_blank" rel="noopener">Download Client</a>
+                        <h4>Baixe o Cliente</h4>
+                        <p>Faça o download do cliente do jogo (Linux, Windows ou Mac).</p>
+                        <a href="https://drive.google.com/file/d/1--VQaHdszD95goa7wXr5u98kzryEDHRt/view?usp=drive_link" class="btn uo-btn mt-2" target="_blank">Baixar Cliente</a>
                     </div>
                 </div>
+                
                 <div class="col-md-4 mb-4">
                     <div class="step-card">
                         <div class="step-number">2</div>
-                        <div class="uo-feature-icon">⚙️</div>
-                        <h4>Configure a Conexão</h4>
-                        <p>Configure o client para conectar ao nosso servidor usando os dados fornecidos.</p>
-                        <a href="https://wiki.ecosdesosaria.com/wiki/Primeiros_Passos" class="btn uo-btn mt-2" target="_blank" rel="noopener">Ver Configurações</a>
+                        <h4>Crie sua conta</h4>
+                        <p>Entre no jogo e crie sua conta diretamente no cliente.</p>
+                        <p class="bonus-text">Após criar a conta, você poderá criar seu personagem e começar sua jornada!</p>
                     </div>
                 </div>
+                
                 <div class="col-md-4 mb-4">
                     <div class="step-card">
                         <div class="step-number">3</div>
-                        <div class="uo-feature-icon">🎮</div>
-                        <h4>Crie seu Personagem</h4>
-                        <p>Entre no jogo e crie seu personagem seguindo as diretrizes de roleplay.</p>
-                        <a href="https://wiki.ecosdesosaria.com/wiki/Primeiros_Passos" class="btn uo-btn mt-2" target="_blank" rel="noopener">Guias de Criação</a>
+                        <h4>Primeiros Passos</h4>
+                        <p>Ficou com alguma dúvida? Temos uma wiki de 'Primeiros Passos'.</p>
+                        <a href="https://wiki.ecosdesosaria.com/wiki/Primeiros_Passos" class="btn uo-btn mt-2" target="_blank">Primeiros Passos</a>
                     </div>
                 </div>
             </div>
+            
+            <div class="text-center mt-4">
+                <p>Precisa de ajuda? Entre em contato conosco no Stoat!</p>
+                <a href="https://stt.gg/D4QVyFgc" class="btn uo-btn" target="_blank">Stoat do Servidor</a>
+            </div>
         </div>
     </section>
-
-    
 
     <!-- Footer -->
     <footer class="uo-footer">
@@ -976,102 +1077,125 @@
             <div class="row">
                 <div class="col-md-6">
                     <h5>Ecos de Sosaria</h5>
-                    <p>Servidor de Ultima Online focado em roleplay.</p>
-                    <p>Não afiliado à Electronic Arts ou Origin Systems.</p>
+                    <p>Um servidor de Ultima Online focado em roleplay e comunidade.</p>
+                    <p>IP: ecosdesosaria.com<br>Porta: 2593</p>
                 </div>
-                <div class="col-md-6 text-end">
+                <div class="col-md-3">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="text-reset">Início</a></li>
+                        <li><a href="#sobre" class="text-reset">Sobre</a></li>
+                        <li><a href="#racas" class="text-reset">Raças</a></li>
+                        <li><a href="#regras" class="text-reset">Regras</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Recursos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://wiki.ecosdesosaria.com" class="text-reset" target="_blank">Wiki</a></li>
+                        <li><a href="https://stt.gg/D4QVyFgc" class="text-reset" target="_blank">Stoat</a></li>
+                        <li><a href="https://github.com/ecosdesosaria" class="text-reset" target="_blank">Mastodon</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="uo-divider"></div>
+            <div class="row">
+                <div class="col-md-12 text-center">
                     <p>&copy; 2025 Ecos de Sosaria.</p>
-                    <p>Ultima Online é uma marca registrada da Electronic Arts Inc.</p>
                 </div>
             </div>
         </div>
+        <div class="col-md-12 text-center mb-3">
+    <div class="social-icons">
+        <a href="https://stt.gg/D4QVyFgc" class="text-decoration-none mx-3" target="_blank" rel="noopener" title="Stoat">
+            <i class="bi bi-chat-dots fs-4"></i>
+        </a>
+        <a href="https://mastodon.social/@ecosdesosaria" class="text-decoration-none mx-3" target="_blank" rel="me noopener" title="Mastodon">
+            <i class="bi bi-mastodon fs-4"></i>
+        </a>
+    </div>
+</div>
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
+    <!-- Script para animações e funcionalidades -->
     <script>
-        async function atualizarStatus() {
-            const statusEl = document.querySelector(".server-status");
-            const countEl = document.getElementById("count");
-            const list = document.getElementById("players");
-            const accountsEl = document.getElementById("accounts");
-
+        // Função para atualizar o status do servidor
+        async function updateServerStatus() {
             try {
-                const res = await fetch("/api/players", { cache: "no-store" });
-                if (!res.ok) throw new Error("HTTP " + res.status);
-                const data = await res.json();
-
-                // Server status (online/offline)
-                if (data.online) {
-                    statusEl.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i>Online';
-                    statusEl.classList.remove("text-danger", "border-danger");
-                    statusEl.classList.add("text-success", "border-success");
-                    statusEl.style.color = "";
-                } else {
-                    statusEl.innerHTML = '<i class="bi bi-x-circle-fill me-1"></i>Offline';
-                    statusEl.classList.remove("text-success", "border-success");
-                    statusEl.classList.add("text-danger", "border-danger");
-                    statusEl.style.color = "";
-                }
-
-                // Player count & accounts
-                countEl.textContent = " " + data.count;
-                if (accountsEl) accountsEl.textContent = " " + data.accounts;
-
-                // Player list
-                list.innerHTML = "";
-                if (data.count === 0) {
-                    list.innerHTML = "<li class='text-muted'><i class='bi bi-person-x me-2'></i>Nenhum jogador online</li>";
-                } else {
-                    data.players.forEach(name => {
-                        const li = document.createElement("li");
-                        li.innerHTML = `<i class="bi bi-person-fill me-2 text-success"></i>${escapeHtml(name)}`;
-                        list.appendChild(li);
+                const response = await fetch('https://api.ecosdesosaria.com/status');
+                const data = await response.json();
+                
+                document.getElementById('count').textContent = data.count || '0';
+                document.getElementById('accounts').textContent = data.accounts || '0';
+                
+                const playersList = document.getElementById('players');
+                playersList.innerHTML = '';
+                
+                if (data.players && data.players.length > 0) {
+                    data.players.forEach(player => {
+                        const li = document.createElement('li');
+                        li.textContent = player;
+                        playersList.appendChild(li);
                     });
+                } else {
+                    const li = document.createElement('li');
+                    li.textContent = 'Nenhum jogador online';
+                    li.className = 'text-muted';
+                    playersList.appendChild(li);
                 }
-
-            } catch (e) {
-                statusEl.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-1"></i>Offline';
-                statusEl.classList.remove("text-success", "border-success");
-                statusEl.classList.add("text-danger", "border-danger");
-                countEl.textContent = "0";
-                if (accountsEl) accountsEl.textContent = "0";
-                list.innerHTML = "<li class='text-muted'><i class='bi bi-wifi-off me-2'></i>Erro ao conectar</li>";
-                console.error("atualizarStatus error:", e);
+            } catch (error) {
+                console.error('Erro ao buscar status do servidor:', error);
+                document.getElementById('count').textContent = 'Erro';
+                document.getElementById('accounts').textContent = 'Erro';
+                
+                const playersList = document.getElementById('players');
+                playersList.innerHTML = '<li class="text-muted">Erro ao carregar</li>';
             }
         }
-
-        // função simples para escapar HTML (nome do player)
-        function escapeHtml(text) {
-            return text.replace(/[&<>"'`=\/]/g, function (s) {
-                return ({
-                    '&': '&amp;',
-                    '<': '&lt;',
-                    '>': '&gt;',
-                    '"': '&quot;',
-                    "'": '&#39;',
-                    '/': '&#x2F;',
-                    '`': '&#x60;',
-                    '=': '&#x3D;'
-                })[s];
-            });
-        }
-
-        // inicializa
-        atualizarStatus();
-        setInterval(atualizarStatus, 50000);
-
-        // Suavizar rolagem para âncoras
+        
+        // Atualizar status a cada 30 segundos
+        updateServerStatus();
+        setInterval(updateServerStatus, 30000);
+        
+        // Smooth scroll para links internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
                     });
+                }
+            });
+        });
+        
+        // Adicionar classe ativa ao item de menu quando a seção estiver visível
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.uo-nav .nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
                 }
             });
         });
